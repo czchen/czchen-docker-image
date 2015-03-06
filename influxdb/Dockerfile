@@ -6,8 +6,8 @@ RUN apt-get update -y && \
     apt-get install -y supervisor && \
     apt-get clean
 
-ADD ./pkg /tmp/pkg
-RUN dpkg -i /tmp/pkg/influxdb_0.8.8_amd64.deb && rm -r /tmp/pkg
+ADD ./pkg/influxdb_0.8.8_amd64.deb /tmp/pkg/influxdb_0.8.8_amd64.deb
+RUN dpkg -i /tmp/pkg/influxdb_0.8.8_amd64.deb && rm -r /tmp/pkg/influxdb_0.8.8_amd64.deb
 
 ADD ./pkg/run-influxdb /usr/local/bin/run-influxdb
 
