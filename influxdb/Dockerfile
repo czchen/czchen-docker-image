@@ -10,7 +10,7 @@ ADD ./pkg /tmp/pkg
 RUN dpkg -i /tmp/pkg/influxdb_0.8.8_amd64.deb
 RUN /tmp/pkg/run-influxdb /usr/local/bin/run-influxdb
 
-ADD ./cfg/supervisored.conf /etc/supervisor/conf.d/supervisored.conf
+ADD ./cfg/influxdb.conf /etc/supervisor/conf.d/influxdb.conf
 
 VOLUME /opt/influxdb/shared/data
 VOLUME /var/log/supervisor
