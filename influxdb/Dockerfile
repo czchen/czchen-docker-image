@@ -8,6 +8,7 @@ RUN	apt-get update -y && \
 
 ADD	./pkg /tmp/pkg
 RUN	dpkg -i /tmp/pkg/influxdb_0.8.8_amd64.deb
+RUN	/tmp/pkg/run-influxdb /usr/local/bin/run-influxdb
 
 VOLUME	/opt/influxdb/shared/data
 
