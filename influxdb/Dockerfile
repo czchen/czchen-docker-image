@@ -11,7 +11,7 @@ RUN dpkg -i /tmp/pkg/influxdb_0.8.8_amd64.deb && rm -r /tmp/pkg/influxdb_0.8.8_a
 
 ADD ./pkg/run-influxdb /usr/local/bin/run-influxdb
 
-ADD ./cfg/influxdb.conf /etc/supervisor/conf.d/influxdb.conf
+ADD ./cfg/supervisor.conf /etc/supervisor/conf.d/influxdb.conf
 
 VOLUME /opt/influxdb/shared/data
 VOLUME /var/log/supervisor
